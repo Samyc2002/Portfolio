@@ -1,10 +1,13 @@
 import React from 'react';
+import Image from 'next/image';
+
+import { Center } from '../Section';
 
 const Logo = () => {
     return (
-        <div>
-            Logo
-        </div>
+        <Center>
+            <Image src="/Logo-Light.png" alt="logo" width={50} height={50}/> Samy.exe
+        </Center>
     )
 }
 
