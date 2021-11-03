@@ -11,7 +11,7 @@ const Logo = () => {
 
     return (
         <Section type="center">
-            <div className="inline-flex items-center" onClick={() => router.push('/')}><Image src="/Logo-Light.png" alt="logo" width={50} height={50}/> <TextStyle>Samy.exe</TextStyle></div>
+            <div className="inline-flex gap-4 items-center cursor-pointer" onClick={() => router.push('/')}><Image src="/Logo-Light.png" alt="logo" width={50} height={50}/> <TextStyle>Samy.exe</TextStyle></div>
         </Section>
     )
 }

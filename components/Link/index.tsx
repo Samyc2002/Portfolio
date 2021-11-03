@@ -9,7 +9,7 @@ interface Iprops {
 const LinkComponent = ({ href, children }: Iprops) => {
     return (
         <Link href={href}>
-            {children}
+            <span className="cursor-pointer">{children}</span>
         </Link>
     )
 }
