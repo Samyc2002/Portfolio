@@ -9,7 +9,7 @@ import LinkComponent from '../Link';
 const Header = () => {
     
     return (
-        <header>
+        <header className="fixed w-screen px-20 z-20">
             <nav className="pt-6 h-20">
                 <Section style="h-14" type="center" spread stretch>
                     <Section style="h-14" type="left" cols={1}><Logo/></Section>

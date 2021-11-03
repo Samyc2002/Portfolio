@@ -1,10 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import styles from '../styles/Root.module.css'
+import Landing from '../components/Landing';
+import styles from '../styles/Root.module.css';
+import Separator from '../components/Separator';
 
 const Home: NextPage = () => {
   return (
@@ -17,11 +18,12 @@ const Home: NextPage = () => {
 
       <Header/>
       <main className={styles.main}>
-        Content
+        <Landing/>
+        <Separator/>
       </main>
       <Footer/>
     </div>
   )
 }
 
-export default Home
+export default Home;
