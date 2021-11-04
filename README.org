@@ -1,7 +1,6 @@
 #+TITLE: Portfolio
 #+AUTHOR: Samriddha Chattopadhyay (Samy)
 
-
 ** Table Of Contents :toc:
   - [[#about-the-project][About The Project]]
   - [[#built-with][Built With]]
