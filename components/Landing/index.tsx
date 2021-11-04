@@ -9,7 +9,7 @@ import Section from '../Section';
 
 const loader = ({ src, width, quality }: any) => {
     return `https://source.unsplash.com/${width}x${1080*width/1920}/?nature,water`;
-  }
+}
 
 const Landing = () => {
 
