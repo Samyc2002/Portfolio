@@ -9,6 +9,10 @@
   font-weight: 500;
 }
 
+body {
+  background-color: #3E4451;
+}
+
 a {
   color: inherit;
   text-decoration: none;

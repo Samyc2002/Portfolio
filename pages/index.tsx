@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import About from '../components/About';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Landing from '../components/Landing';
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <Landing/>
         <Separator/>
+        <About/>
       </main>
       <Footer/>
     </div>

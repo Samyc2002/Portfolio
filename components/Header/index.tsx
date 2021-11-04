@@ -14,10 +14,19 @@ const Header = () => {
     const { black, white } = useColourScheme();
 
     const [hover, setHover] = React.useState(false);
+    const [top, setTop] = React.useState(true);
+
+    React.useEffect(() => {
+        window.onscroll = () => {
+            window.pageYOffset === 0 && setTop(true);
+            window.pageYOffset !== 0 && setTop(false);
+        }
+        return () => {window.onscroll = null};
+    }, []);
     
     return (
-        <header className="fixed w-screen px-20 z-20">
-            <nav className="pt-6 h-20">
+        <header style={{ backgroundColor: top?'transparent':'rgb(62, 68, 81, 0.3)', transition: '500 ease-in-out background-color' }} className={`fixed w-screen px-20 z-20 ${top?'':'backdrop-filter backdrop-blur-sm'}`}>
+            <nav className="pt-3 h-20">
                 <Section style="h-14" type="center" spread stretch>
                     <Section style="h-14" type="left" cols={1}><Logo/></Section>
                     <Section style="h-14" type="right" gap={4} cols={5}>
