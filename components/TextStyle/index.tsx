@@ -6,10 +6,11 @@ interface Iprops{
     children: React.ReactNode,
     color?: string,
     orientation?:'horizontal'|'vertical',
-    type?: 'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p'|'span'|'pre'
+    type?: 'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p'|'span'|'pre',
+    style?: string
 }
 
-const TextStyle = ({ children, color, orientation, type }: Iprops) => {
+const TextStyle = ({ children, color, orientation, type, style }: Iprops) => {
 
     const { white } = useColourScheme();
 
@@ -53,7 +54,7 @@ const TextStyle = ({ children, color, orientation, type }: Iprops) => {
     return (
         <>
             {(!type || type !== 'pre')?(
-                <span style={{ color: color||white, ...sizes[type] }} className={orientation?`inline-flex space-x-4`:''}>
+                <span style={{ color: color||white, ...sizes[type] }} className={`${style} ${orientation?'inline-flex space-x-4':''}`}>
                     {children}
                 </span>
             ):(
