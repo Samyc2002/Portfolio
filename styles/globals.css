@@ -9,6 +9,10 @@
   font-weight: 500;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #3E4451;
 }

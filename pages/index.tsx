@@ -21,7 +21,9 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <Landing/>
         <Separator/>
-        <About/>
+        <div id="about">
+          <About/>
+        </div>
       </main>
       <Footer/>
     </div>
