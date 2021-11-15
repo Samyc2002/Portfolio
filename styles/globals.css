@@ -1,20 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 500;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #3E4451;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
