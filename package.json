@@ -5,7 +5,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,scss}\" && npm run lint:fix",
+    "format-check": "prettier --check \"**/*.{ts,tsx,js,scss}\"",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
   "dependencies": {
     "next": "12.0.3",
@@ -17,6 +20,7 @@
     "@types/react": "17.0.34",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3",
+    "prettier": "^2.4.1",
     "typescript": "4.4.4"
   }
 }
