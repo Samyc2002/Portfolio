@@ -1,7 +1,7 @@
 .headerRoot {
   position: absolute;
   top: -5;
-  background: linear-gradient(0deg, rgba(62, 68, 81, 1), rgba(62, 68, 81, 0.6));
+  background: linear-gradient(180deg, rgba(40, 44, 52, 0.4), rgba(40, 44, 52, 1));
   width: 100vw;
   height: 100vh;
   display: flex;
