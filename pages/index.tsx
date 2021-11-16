@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Image loader={loader} src={"me.png"} alt="background" layout="fill" sizes="50vw" priority={true}/>
       <Navbar/>
       <Header/>
-      <div style={{ height: '100vh' }}/>
+      <div className={styles.headerPadding}/>
       <Separator/>
       <Footer/>
     </div>
