@@ -1,0 +1,41 @@
+.aboutRoot {
+  padding: 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #FF6C6B;
+  font-weight: 600;
+  width: 75%;
+}
+
+.padding {
+  width: 100px;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage {
+  border-radius: 50rem;
+}
+
+.highlight {
+  color: #ECBE7B;
+}
+
+.aboutAbout {
+  color: #D9E1EE;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  width: 50%
+}
