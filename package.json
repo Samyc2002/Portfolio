@@ -6,9 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"**/*.{ts,tsx,js,scss}\" && npm run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,scss}\" && npm run lint",
     "format-check": "prettier --check \"**/*.{ts,tsx,js,scss}\"",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    "prettier-format": "prettier --config .prettierrc '**/*.{ts,tsx,js,scss, css}' --write"
   },
   "dependencies": {
     "lottie-web": "^5.8.1",
@@ -22,6 +22,9 @@
     "@types/react": "17.0.34",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
     "typescript": "4.4.4"
   }

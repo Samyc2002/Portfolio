@@ -1,0 +1,31 @@
+.cardRoot {
+  background-color: var(--black);
+  padding: 1rem 2.3rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 350ms;
+}
+
+.caption {
+  color: #ECBE7B;
+  text-align: center;
+  font-weight: 600;
+}
+
+.children {
+  overflow-y: hidden;
+}
+
+.cardRoot:hover {
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3) !important;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3) !important;
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3) !important;
+}
+
+.cardRoot:hover .caption {
+  color: var(--background);
+}
