@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+  --white: #D9E1EE;
+  --black: #282C34;
+  --background: #3E4451;
+  --red: #FF6C6B;
+  --yellow: #ECBE7B;
+  --blue: #46D9FF;
+  --magenta: #A9A1E;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #ffffff #0E141B;
+}
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	/* background: var(--background); */
+  background: #00121212;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--white);
+	border-radius: 20px;
+}
+
 html,
 body {
   padding: 0;
