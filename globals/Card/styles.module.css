@@ -12,6 +12,7 @@
 .caption {
   color: #ECBE7B;
   text-align: center;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -28,4 +29,10 @@
 
 .cardRoot:hover .caption {
   color: var(--background);
+}
+
+@media screen and (max-width: 1250px) {
+  .caption {
+    font-size: 1rem;
+  }
 }

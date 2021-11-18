@@ -1,7 +1,6 @@
 .primaryButtonRoot {
   background: rgba(161, 194, 246, 1);
   padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
   cursor: pointer;
   transition-duration: 350ms;
 }
@@ -16,7 +15,6 @@
 .secondaryButtonRoot {
   border: 0.2rem solid #A1C2F6;
   padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
   cursor: pointer;
   transition-duration: 350ms;
 }
@@ -32,7 +30,6 @@
 .textButtonRoot {
   background-color: transparent;
   padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
   color: #D9E1EE;
   cursor: pointer;
   transition-duration: 350ms;
@@ -55,4 +52,18 @@
 .buttonTextColored {
   font-weight: 500;
   color: #A1C2F6;
+}
+
+@media screen and (max-width:480px) {
+  .primaryButtonRoot {
+    padding: 0.5rem 0.2rem;
+  }
+
+  .secondaryButtonRoot {
+    padding: 0.5rem 0.2rem;
+  }
+
+  .textButtonRoot {
+    padding: 0.5rem 0.2rem;
+  }
 }
