@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import { Header, Navbar, Separator, Footer, About } from '../components';
+import { Header, Separator, Footer, About } from '../components';
 import styles from '../styles/Home.module.css';
 
 const loader = ({ src, width, quality }: any) => {
@@ -21,10 +21,9 @@ const Home: NextPage = () => {
         sizes="50vw"
         priority={true}
       />
-      <Navbar />
       <Header />
       <div className={styles.headerPadding} />
-      <Separator type={2} />
+      <Separator/>
       <About />
       <Footer />
     </div>

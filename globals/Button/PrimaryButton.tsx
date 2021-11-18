@@ -6,11 +6,12 @@ interface Iprops {
   children: React.ReactNode;
   bg?: string;
   col?: string;
+  rounded?: boolean;
 }
 
-const PrimaryButton = ({ children }: Iprops) => {
+const PrimaryButton = ({ children, rounded }: Iprops) => {
   return (
-    <div className={styles.primaryButtonRoot}>
+    <div className={styles.primaryButtonRoot} style={{ borderRadius: rounded?'5rem':'0.3rem' }}>
       <span className={styles.buttonText}>{children}</span>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import lottie from 'lottie-web';
+import styles from './styles.module.css';
 
 const HomeSVG = () => {
   const container = React.useRef<any>(null);
@@ -14,7 +15,7 @@ const HomeSVG = () => {
     });
   }, []);
 
-  return <div className="max-width-9/10" ref={container} />;
+  return <div className={styles.homeSVGRoot} ref={container} />;
 };
 
 export default HomeSVG;
