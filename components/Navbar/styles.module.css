@@ -86,6 +86,10 @@
   color: #D9E1EE;
 }
 
+.spacing {
+  height: calc((87/2044)*100vh);
+}
+
 @media screen and (max-width: 400px) {
   .navbarRoot {
     padding: 0.5rem 1rem !important;

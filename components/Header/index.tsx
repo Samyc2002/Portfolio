@@ -5,6 +5,7 @@ import {
   RiInstagramFill,
   RiTwitterFill
 } from 'react-icons/ri';
+import { IconButton } from '@material-ui/core';
 
 import HomeSVG from '../HomeSVG';
 import styles from './styles.module.css';

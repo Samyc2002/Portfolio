@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Tech from './Tech.tsx';
-import Tools from './Tools.tsx';
+import Tech from './Tech';
+import Tools from './Tools';
 import styles from './styles.module.css';
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
       <div className={styles.aboutRoot1}>
         <br />
         <br />
-        <h1 className={styles.title1}>Who Am I ?</h1>
+        <h1 className={styles.title1}>About Me</h1>
         <br />
         <div className={styles.aboutContent}>
           <Image
@@ -37,7 +37,7 @@ const About = () => {
               C, C++, Javascript
             </span> and <span className={styles.highlight}>Python</span>
             <br />
-            My love to coding and making new things brought me into{' '}
+            My passion for coding and making new things brought me into{' '}
             <span className={styles.highlight}>
               Competitive Programming
             </span>{' '}
