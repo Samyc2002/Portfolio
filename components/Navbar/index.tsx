@@ -89,7 +89,7 @@ const Navbar = () => {
                     </div>
                   </Link>
                 </Button>
-                <div className={styles.padding} />
+                {/* <div className={styles.padding} /> */}
                 {/* <Button type="text" className={styles.button}>
                   <Link href="#">
                     <div className={styles.iconButton}>
@@ -134,7 +134,7 @@ const Navbar = () => {
                     </div>
                   </Link>
                 </Button>
-                <div className={styles.padding} />
+                {/* <div className={styles.padding} /> */}
                 {/* <Button type="text" className={styles.button}>
                   <Link href="#">
                     <div className={styles.iconButton}>
@@ -177,7 +177,7 @@ const Navbar = () => {
                 <Button type="text" className={styles.button}>
                   <Link href="/resume">Resume</Link>
                 </Button>
-                <div className={styles.padding} />
+                {/* <div className={styles.padding} /> */}
                 {/* <Button type="text" className={styles.button}>
                   <Link href="#">Blog</Link>
                 </Button> */}

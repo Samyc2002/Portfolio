@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 import { useStyles } from '../styles/Projects.styles';
 import styles from '../styles/Projects.module.css';
-import { Navbar } from '../components';
+import { Navbar, GithubCard } from '../components';
 
 const Projects: NextPage = () => {
 
@@ -18,6 +18,14 @@ const Projects: NextPage = () => {
       </Head>
       <Navbar />
       <div className={classes.toolbar} />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <GithubCard repo="Coders-Garage" image="/Background.png"/>
     </>
   )
 }

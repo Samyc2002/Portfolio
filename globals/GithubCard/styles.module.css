@@ -1,0 +1,18 @@
+.root {
+    background: var(--black);
+    color: #D9E1EE;
+    border: 1px solid var(--white);
+    border-radius: 7px;
+    padding: 1rem;
+}
+
+.h5{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--blue);
+}
+
+.h4{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
