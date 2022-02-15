@@ -31,6 +31,6 @@ export const useStyles = makeStyles((theme) => createStyles({
     },
     text: {
         fontFamily: "'Poppins', sans-serif",
-        fontWeight: 400
+        fontWeight: '500'
     }
 }));

@@ -90,13 +90,13 @@ const Navbar = () => {
                   </Link>
                 </Button>
                 <div className={styles.padding} />
-                <Button type="text" className={styles.button}>
+                {/* <Button type="text" className={styles.button}>
                   <Link href="#">
                     <div className={styles.iconButton}>
                       <IoIosBook/>
                     </div>
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
           ) : (
@@ -135,13 +135,13 @@ const Navbar = () => {
                   </Link>
                 </Button>
                 <div className={styles.padding} />
-                <Button type="text" className={styles.button}>
+                {/* <Button type="text" className={styles.button}>
                   <Link href="#">
                     <div className={styles.iconButton}>
                       <IoIosBook/>
                     </div>
                   </Link>
-                </Button>
+                </Button> */}
                 <div className={styles.padding} />
                 <div className={styles.button}>
                   <Link href="https://github.com/Samyc2002/Portfolio" passHref>
@@ -178,9 +178,9 @@ const Navbar = () => {
                   <Link href="/resume">Resume</Link>
                 </Button>
                 <div className={styles.padding} />
-                <Button type="text" className={styles.button}>
+                {/* <Button type="text" className={styles.button}>
                   <Link href="#">Blog</Link>
-                </Button>
+                </Button> */}
                 <div className={styles.padding} />
                 <div className={styles.button}>
                   <Link href="https://github.com/Samyc2002/Portfolio" passHref>
