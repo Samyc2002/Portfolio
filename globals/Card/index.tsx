@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.css';
 
-interface Iprops {
+interface IProps {
   children?: React.ReactNode;
   caption?: string;
   animate?: boolean;
@@ -13,7 +13,7 @@ const Card = ({ children, caption, animate }: IProps) => {
     <>
       <div className={styles.cardRoot}>
         <div className={styles.children}>{children}</div>
-        <div>
+        <div className={styles.content}>
           <h2 className={styles.caption}>{caption}</h2>
         </div>
       </div>

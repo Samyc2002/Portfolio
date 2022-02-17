@@ -3,16 +3,25 @@
     color: #D9E1EE;
     border: 1px solid var(--white);
     border-radius: 7px;
+    max-width: 768px;
+}
+
+.content {
     padding: 1rem;
 }
 
 .h5{
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--blue);
 }
 
 .h4{
     font-size: 0.9rem;
     font-weight: 400;
+}
+
+.span{
+    font-size: 0.9rem;
+    color: var(--blue);
 }

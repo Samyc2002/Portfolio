@@ -9,77 +9,87 @@ import {
   DiGit
 } from 'react-icons/di';
 import { SiNextdotjs, SiFirebase } from 'react-icons/si';
+import { Grid } from '@material-ui/core';
 
 import { Card } from '../../globals';
 import styles from './styles.module.css';
 
 const Tech = () => {
   return (
-    <div className={styles.aboutRoot2}>
-      <div className={styles.aboutRoot21}>
-        <Card caption="C++" animate>
-          <span className={styles.children}>
-            <CgCPlusPlus />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot22}>
-        <Card caption="Javascript" animate>
-          <span className={styles.children}>
-            <DiNodejsSmall />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot23}>
-        <Card caption="Node" animate>
-          <span className={styles.children}>
-            <DiNodejs />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot24}>
-        <Card caption="React" animate>
-          <span className={styles.children}>
-            <RiReactjsFill />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot25}>
-        <Card caption="Next" animate>
-          <span className={styles.children}>
-            <SiNextdotjs />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot26}>
-        <Card caption="MongoDB" animate>
-          <span className={styles.children}>
-            <DiMongodb />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot27}>
-        <Card caption="Python" animate>
-          <span className={styles.children}>
-            <DiPython />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot28}>
-        <Card caption="Git" animate>
-          <span className={styles.children}>
-            <DiGit />
-          </span>
-        </Card>
-      </div>
-      <div className={styles.aboutRoot29}>
-        <Card caption="Firebase" animate>
-          <span className={styles.children}>
-            <SiFirebase />
-          </span>
-        </Card>
-      </div>
-    </div>
+    <Grid container spacing={3} justifyContent="center" alignItems="stretch">
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+            <Card caption="C++" animate>
+              <br/>
+                <span className={styles.children}>
+                  <CgCPlusPlus />
+                </span>
+            </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="Javascript" animate>
+            <br/>
+            <span className={styles.children}>
+              <DiNodejsSmall />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="Node" animate>
+            <br/>
+            <span className={styles.children}>
+              <DiNodejs />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="React" animate>
+            <br/>
+            <span className={styles.children}>
+              <RiReactjsFill />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="Next" animate>
+            <br/>
+            <span className={styles.children}>
+              <SiNextdotjs />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="MongoDB" animate>
+            <br/>
+            <span className={styles.children}>
+              <DiMongodb />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="Python" animate>
+            <br/>
+            <span className={styles.children}>
+              <DiPython />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="Git" animate>
+            <br/>
+            <span className={styles.children}>
+              <DiGit />
+            </span>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <Card caption="Firebase" animate>
+            <br/>
+            <span className={styles.children}>
+              <SiFirebase />
+            </span>
+          </Card>
+        </Grid>
+    </Grid>
   )
 }
 

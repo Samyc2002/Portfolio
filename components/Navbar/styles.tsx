@@ -27,7 +27,8 @@ export const useStyles = makeStyles((theme) => createStyles({
     align: {
         display: 'flex',
         justifyContent: 'space-evenly',
-        alignItems: 'center'
+        alignItems: 'center',
+        cursor: 'pointer'
     },
     text: {
         fontFamily: "'Poppins', sans-serif",

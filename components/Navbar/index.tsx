@@ -40,7 +40,7 @@ const Navbar = () => {
           {isTabletorMobile ? isTabletorMobileSmall ? (
             <div className={classes.title}>
               <div className={classes.root}>
-                <div className={classes.align}>
+                <div className={classes.align} onClick={() => router.push('/')}>
                   <Image src="/Logo_Light.png" width={55} height={55} alt="logo" />
                   <div className={styles.padding} />
                   <Typography variant="h6" className={classes.text}>
@@ -101,7 +101,7 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              <Image src="/Logo_Light.png" width={55} height={55} alt="logo" />
+              <Image src="/Logo_Light.png" width={55} height={55} alt="logo" className={classes.align} onClick={() => router.push('/')} />
               <div className={classes.align}>
                 <Button type="text" className={styles.button}>
                   <Link href="/">
@@ -154,7 +154,7 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <div className={classes.align}>
+              <div className={classes.align} onClick={() => router.push('/')}>
                 <Image src="/Logo_Light.png" width={55} height={55} alt="logo" />
                 <div className={styles.padding} />
                 <Typography variant="h5" className={classes.text}>
