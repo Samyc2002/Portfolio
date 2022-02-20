@@ -1,36 +1,24 @@
 {
-  "name": "portfolio",
+  "name": "client",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write \"**/*.{ts,tsx,js,scss}\" && npm run lint",
-    "format-check": "prettier --check \"**/*.{ts,tsx,js,scss}\"",
-    "prettier-format": "prettier --config .prettierrc '**/*.{ts,tsx,js,scss, css}' --write"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.60",
-    "axios": "^0.26.0",
-    "lottie-web": "^5.8.1",
-    "next": "12.0.3",
+    "next": "12.0.10",
     "react": "17.0.2",
+    "react-animated-cursor": "^2.2.0",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "react-responsive": "^9.0.0-beta.4"
+    "react-pro-sidebar": "^0.7.1"
   },
   "devDependencies": {
-    "@types/node": "16.11.7",
-    "@types/react": "17.0.34",
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.3",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1",
-    "typescript": "4.4.4"
+    "@types/node": "17.0.14",
+    "@types/react": "17.0.38",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10",
+    "typescript": "4.5.5"
   }
 }

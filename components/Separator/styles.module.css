@@ -1,9 +1,0 @@
-.separator {
-
-}
-
-@media screen and (max-width: 740px) {
-  .separator {
-    margin-top: -0.3rem;
-  }
-}
