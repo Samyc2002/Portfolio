@@ -37,7 +37,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   scroll-behavior: smooth;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .cursor .cursor--small,
@@ -75,4 +75,30 @@ body {
 .cursor .cursor--large {
   --cursor-size: 60px;
   border: 2px solid var(--magenta);
+}
+
+.pro-sidebar .overlay {
+  background-color: transparent;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.padding {
+  width: 17rem;
+}
+
+@media (max-width: 1023px) {
+  .padding {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .padding {
+    width: 0;
+  }
 }

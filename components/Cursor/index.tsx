@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 interface StyleProps {
     cursor: React.CSSProperties,
@@ -49,14 +49,14 @@ function AnimatedCursor({ color = '220, 90, 90', outerAlpha = 0.4, innerSize = 8
     
     const animateOuterCursor = React.useCallback(
         (time) => {
-        if (previousTimeRef.current !== undefined) {
-            coords.x += (endX.current - coords.x) / 8
-            coords.y += (endY.current - coords.y) / 8
-            cursorOuterRef.current.style.top = coords.y + 'px'
-            cursorOuterRef.current.style.left = coords.x + 'px'
-        }
-        previousTimeRef.current = time
-        requestRef.current = requestAnimationFrame(animateOuterCursor)
+            if (previousTimeRef.current !== undefined) {
+                coords.x += (endX.current - coords.x - 10) / 8
+                coords.y += (endY.current - coords.y - 10) / 8
+                cursorOuterRef.current.style.top = coords.y + 'px'
+                cursorOuterRef.current.style.left = coords.x + 'px'
+            }
+            previousTimeRef.current = time
+            requestRef.current = requestAnimationFrame(animateOuterCursor)
         },
         [requestRef] // eslint-disable-line
     )
@@ -76,75 +76,72 @@ function AnimatedCursor({ color = '220, 90, 90', outerAlpha = 0.4, innerSize = 8
     
     React.useEffect(() => {
         if (isActive) {
-        cursorInnerRef.current.style.transform = `scale(${innerScale})`
-        cursorOuterRef.current.style.transform = `scale(${outerScale})`
+            cursorInnerRef.current.style.transform = `scale(${innerScale})`
+            cursorOuterRef.current.style.transform = `scale(${outerScale})`
         } else {
-        cursorInnerRef.current.style.transform = 'scale(1)'
-        cursorOuterRef.current.style.transform = 'scale(1)'
+            cursorInnerRef.current.style.transform = 'scale(1)'
+            cursorOuterRef.current.style.transform = 'scale(1)'
         }
     }, [innerScale, outerScale, isActive])
     
     React.useEffect(() => {
         if (isActiveClickable) {
-        cursorInnerRef.current.style.transform = `scale(${innerScale * 1.3})`
-        cursorOuterRef.current.style.transform = `scale(${outerScale * 1.4})`
+            cursorInnerRef.current.style.transform = `scale(${innerScale * 1.3})`
+            cursorOuterRef.current.style.transform = `scale(${outerScale * 1.4})`
         }
     }, [innerScale, outerScale, isActiveClickable])
     
     React.useEffect(() => {
         if (isVisible) {
-        cursorInnerRef.current.style.opacity = 1
-        cursorOuterRef.current.style.opacity = 1
+            cursorInnerRef.current.style.opacity = 1
+            cursorOuterRef.current.style.opacity = 1
         } else {
-        cursorInnerRef.current.style.opacity = 0
-        cursorOuterRef.current.style.opacity = 0
+            cursorInnerRef.current.style.opacity = 0
+            cursorOuterRef.current.style.opacity = 0
         }
     }, [isVisible])
     
     React.useEffect(() => {
-        const clickables = document.querySelectorAll(
-        'a, input[type="submit"], input[type="image"], label[for], select, button, .link'
-        )
+        const clickables = document.querySelectorAll('a, input[type="submit"], input[type="image"], label[for], select, button, .link')
         clickables.forEach((el: any) => {
-        el.style.cursor = 'none'
-    
-        el.addEventListener('mouseover', () => {
-            setIsActive(true)
-        })
-        el.addEventListener('click', () => {
-            setIsActive(true)
-            setIsActiveClickable(false)
-        })
-        el.addEventListener('mousedown', () => {
-            setIsActiveClickable(true)
-        })
-        el.addEventListener('mouseup', () => {
-            setIsActive(true)
-        })
-        el.addEventListener('mouseout', () => {
-            setIsActive(false)
-            setIsActiveClickable(false)
-        })
+            el.style.cursor = 'none'
+            el.addEventListener('mouseover', () => {
+                setIsActive(true)
+            })
+            el.addEventListener('click', () => {
+                setIsActive(true)
+                setIsActiveClickable(false)
+            })
+            el.addEventListener('mousedown', () => {
+                setIsActiveClickable(true)
+            })
+            el.addEventListener('mouseup', () => {
+                setIsActive(true)
+            })
+            el.addEventListener('mouseout', () => {
+                setIsActive(false)
+                setIsActiveClickable(false)
+            })
         })
     
         return () => {
         clickables.forEach((el) => {
             el.removeEventListener('mouseover', () => {
-            setIsActive(true)
+                setIsActive(true)
             })
             el.removeEventListener('click', () => {
-            setIsActive(true)
-            setIsActiveClickable(false)
+                setIsActive(true)
+                setIsActiveClickable(false)
             })
             el.removeEventListener('mousedown', () => {
-            setIsActiveClickable(true)
+                setIsActiveClickable(true)
             })
             el.removeEventListener('mouseup', () => {
-            setIsActive(true)
+                setIsActive(true)
             })
             el.removeEventListener('mouseout', () => {
-            setIsActive(false)
-            setIsActiveClickable(false)
+                setIsActive(false)
+                setIsActiveClickable(false)
             })
         })
         }

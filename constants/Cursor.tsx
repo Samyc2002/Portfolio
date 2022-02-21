@@ -6,8 +6,8 @@ const Cursor = () => {
     return <DynamicCursor 
         color="128, 0, 225"
         outerAlpha={0.3}
-        innerSize={10}
-        outerSize={16}
+        innerSize={0}
+        outerSize={20}
         outerScale={2}
         innerScale={0.7}
     />;

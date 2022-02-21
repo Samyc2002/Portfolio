@@ -12,7 +12,10 @@
     "react": "17.0.2",
     "react-animated-cursor": "^2.2.0",
     "react-dom": "17.0.2",
-    "react-pro-sidebar": "^0.7.1"
+    "react-icons": "^4.3.1",
+    "react-pro-sidebar": "^0.7.1",
+    "react-responsive": "^9.0.0-beta.6",
+    "sass": "^1.49.8"
   },
   "devDependencies": {
     "@types/node": "17.0.14",
