@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import HomeSVG from '../HomeSVG';
 import styles from './style.module.css';
 
 const Header = () => {
 
-    const [state, setState] = useState({ value: 0, previous: 0 });
-
-    const values = [ 'Jan 01 1994', 'Aug 31 1996', 'May 02 2002', 'Mar 20 2006' ];
-
     return (
         <div className={styles.root}>
             <div>
                 <h2 className="text-reveal">
-                    <span>
+                    <span className={styles.highlight}>
                         Hey, there!
                     </span>
                     <span>
@@ -21,10 +17,10 @@ const Header = () => {
                     </span>
                 </h2>
                 <p className="text-reveal">
-                    <span>👉 Competitive Coder</span>
-                    <span>👉 MERN Stack Deveoper</span>
-                    <span>👉 Open Source Contributor</span>
-                    <span>👉 UI/UX Designer</span>
+                    <span className={styles.bold}>👉 Competitive Coder</span>
+                    <span className={styles.bold}>👉 MERN Stack Deveoper</span>
+                    <span className={styles.bold}>👉 Open Source Contributor</span>
+                    <span className={styles.bold}>👉 UI/UX Designer</span>
                 </p>
             </div>
             <HomeSVG/>

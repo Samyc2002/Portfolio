@@ -1,0 +1,9 @@
+.homeSVGRoot {
+    margin-right: -15%;
+}
+
+@media (max-width: 520px) {
+    .homeSVGRoot {
+        margin-right: inherit;
+    }
+}

@@ -4,8 +4,13 @@
     align-items: center;
 }
 
-@media (max-width: 767px) {
-    
+.highlight {
+    color: var(--magenta);
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: 500;
 }
   
 @media (max-width: 1300px) {

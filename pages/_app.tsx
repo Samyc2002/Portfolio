@@ -22,12 +22,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <div style={{ display: 'flex' }}>
       <Cursor/>
       <SideNavBar toggled={toggled} handleToggleSidebar={handleToggleSidebar}/>
-      {isMobile && (
-        <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
-          <FaBars />
-        </div>
-      )}
-      <div className="area" >
+      <div className="area">
         <ul className="circles">
           <li></li>
           <li></li>
@@ -41,6 +36,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <li></li>
         </ul>
       </div >
+      {isMobile && (
+        <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
+          <FaBars />
+        </div>
+      )}
       <div className="main">
         <div className="padding"/>
         <div className="center">

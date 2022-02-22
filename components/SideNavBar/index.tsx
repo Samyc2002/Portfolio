@@ -13,7 +13,7 @@ interface Iprops {
 
 const styles = {
     common: {
-        height: '100vh',
+        height: '100%',
         position: 'fixed',
         cursor: 'default'
     },
