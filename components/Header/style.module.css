@@ -1,0 +1,18 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    
+}
+  
+@media (max-width: 1300px) {
+    .root {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}

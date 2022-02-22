@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import type { NextPage } from 'next'
 import { RiGithubFill, RiLinkedinBoxFill, RiInstagramFill, RiTwitterFill } from 'react-icons/ri';
+
+import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -13,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        
+        <Header/>
       </main>
 
       {/* <footer className={styles.footer}>
