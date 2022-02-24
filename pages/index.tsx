@@ -4,6 +4,7 @@ import { RiGithubFill, RiLinkedinBoxFill, RiInstagramFill, RiTwitterFill } from 
 
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
+import Loading from '../components/Loading';
 
 const Home: NextPage = () => {
   return (
