@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { FaBars } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
+import { ThemeProvider } from '@material-ui/core';
 import '../styles/globals.css';
 import '../styles/App.scss';
 
 import Cursor from '../constants/Cursor';
 import Loading from '../components/Loading';
 import SideNavBar from '../components/SideNavBar';
+import { Theme } from '../constants/Theme';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 
@@ -60,7 +62,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
               <div className="padding"/>
               <div className="center">
                 <div className="stretch">
-                  <Component {...pageProps} />
+                  <ThemeProvider theme={Theme}>
+                    <Component {...pageProps} />
+                  </ThemeProvider>
                 </div>
               </div>
             </div>

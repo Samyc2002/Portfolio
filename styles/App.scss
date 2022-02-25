@@ -331,3 +331,50 @@ $i: 0;
         opacity: 1;
     }
 }
+
+.btn {
+    z-index: 1;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    padding: 8px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 2px;
+    transition: 0.2s ease;
+    font-weight: bold;
+    margin: 5px 0px;
+    &.green {
+      border: 4px solid var(--magenta);
+      color: var(--magenta);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background: var(--magenta);
+        z-index: -1;
+        transition: 0.2s ease;
+      }
+      &:hover {
+        color: var(--white);
+        background: var(--magenta);
+        transition: 1s ease;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:768px) {
+    body {
+      display:block;
+    }
+    .container {
+      margin-top:70px;
+      margin-bottom:70px;
+    }
+  } 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
@@ -6,59 +7,11 @@ import { useMediaQuery } from 'react-responsive';
 import { FcHome, FcContacts, FcDocument } from 'react-icons/fc';
 import { DiCode, DiGithubBadge } from 'react-icons/di';
 
+import { styles } from './styles';
+
 interface Iprops {
     toggled: boolean,
     handleToggleSidebar: (value: boolean) => void
-}
-
-const styles = {
-    common: {
-        height: '100%',
-        position: 'fixed',
-        cursor: 'default'
-    },
-    header: {
-        padding: '24px',
-        textTransform: 'uppercase',
-        fontWeight: 'bold',
-        fontSize: 20,
-        letterSpacing: '1px',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        color: '#D9E1EE',
-        cursor: 'pointer'
-    },
-    menuItem: {
-        textTransform: 'uppercase',
-        fontSize: 16,
-        letterSpacing: '1px',
-        overflow: 'hidden',
-        color: '#D9E1EE'
-    },
-    footer: {
-        top: {
-            textAlign: 'center',
-            cursor: 'default'
-        },
-        child: {
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            overflow: 'hidden',
-            cursor: 'default'
-        },
-        buttonPadding: {
-            padding: '20px 24px',
-            cursor: 'pointer'
-        },
-        iconSize: {
-            fontSize: 20,
-            cursor: 'pointer'
-        }
-    }
 }
 
 const SideNavBar = ({ toggled, handleToggleSidebar }: Iprops) => {
@@ -92,6 +45,7 @@ const SideNavBar = ({ toggled, handleToggleSidebar }: Iprops) => {
                         icon={<FcHome style={{ fontSize: 18 }}/>}
                         prefix={<>&nbsp;</>}
                         style={styles.menuItem}
+                        onClick={() => router.push('/')}
                     >
                         Home
                     </MenuItem>
@@ -99,6 +53,7 @@ const SideNavBar = ({ toggled, handleToggleSidebar }: Iprops) => {
                         icon={<FcContacts style={{ fontSize: 18 }}/>}
                         prefix={<>&nbsp;</>}
                         style={styles.menuItem}
+                        onClick={() => router.push('/about')}
                     >
                         About
                     </MenuItem>
@@ -106,6 +61,7 @@ const SideNavBar = ({ toggled, handleToggleSidebar }: Iprops) => {
                         icon={<DiCode style={{ fontSize: 30 }}/>}
                         prefix={<>&nbsp;</>}
                         style={styles.menuItem}
+                        onClick={() => router.push('/projects')}
                     >
                         Projects
                     </MenuItem>
@@ -113,6 +69,7 @@ const SideNavBar = ({ toggled, handleToggleSidebar }: Iprops) => {
                         icon={<FcDocument style={{ fontSize: 18 }}/>}
                         prefix={<>&nbsp;</>}
                         style={styles.menuItem}
+                        onClick={() => router.push('/resume')}
                     >
                         Resume
                     </MenuItem>
