@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import { FaBars } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
@@ -14,6 +15,8 @@ import { Theme } from '../constants/Theme';
 const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
+
+  const router = useRouter();
 
   const [toggled, setToggled] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -31,7 +34,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       {
-        loading ? (
+        (loading && router.pathname == '/') ? (
           <div className="flexFull">
             <Loading/>
           </div>
@@ -75,4 +78,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-export default MyApp
+export default MyApp;
