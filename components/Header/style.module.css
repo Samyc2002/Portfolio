@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    color: var(--magenta);
+    font-weight: bold;
+    font-style: "'Poppins', sans-serif";
+}
+
+.bold {
+    font-weight: 500;
+}
+  
+@media (max-width: 1300px) {
+    .root {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
