@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <>
       <Head>
-        <title>Samy.exe - Profile</title>
+        <title>Profile - Samy.exe</title>
         <meta name="description" content="Samriddha's Portfolio" />
         <link rel="icon" href="/Logo_Dark.png" />
       </Head>

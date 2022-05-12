@@ -1,16 +1,29 @@
 import React from 'react';
 import Head from 'next/head';
 
+import AboutComp from '../components/Jumbotrons/About';
+import Work from '../components/Work';
+import styles from '../styles/Home.module.css';
+
 const About = () => {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
-        <title>Samy.exe - About</title>
+        <title>About - Samy.exe</title>
         <meta name="description" content="Samriddha's Portfolio" />
         <link rel="icon" href="/Logo_Dark.png" />
       </Head>
-      <div>About</div>
-    </>
+      <br/>
+      <br/>
+      <br/>
+      <AboutComp/>
+      <br/>
+      <br/>
+      <br/>
+      <Work/>
+      <br/>
+      <br/>
+    </div>
   )
 }
 
