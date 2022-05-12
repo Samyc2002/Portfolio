@@ -25,7 +25,7 @@ const ElevationScroll = (props: Props) => {
 
 const pages = ['Home', 'About', 'Projects', 'Profile'];
 
-const ResponsiveAppBar = (props: Props) => {
+const Navbar = (props: Props) => {
     const router = useRouter();
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     
@@ -46,33 +46,15 @@ const ResponsiveAppBar = (props: Props) => {
         handleCloseNavMenu();
     }
 
-    const SpecialIcon = () => {
-        return (
-            <>
-                {(router.pathname === '/Profile')?(
-                    <IconButton
-                        size="large"
-                        onClick={() => router.push('https://github.com/Samyc2002/Portfolio')}
-                        color="inherit"
-                    >
-                        <DownloadOutlinedIcon color="disabled" />
-                    </IconButton>
-                ):(
-                    <IconButton
-                        size="large"
-                        onClick={() => router.push('https://github.com/Samyc2002/Portfolio')}
-                        color="inherit"
-                    >
-                        <GoGitBranch color="disabled" />
-                    </IconButton>
-                )}
-            </>
-        )
-    }
-
   return (
     <ElevationScroll {...props}>
-        <AppBar position="sticky">
+        <AppBar
+            position="sticky"
+            sx={{
+                backdropFilter:"blur(20px)",
+                backgroundColor: "#0a192978",
+            }}
+        >
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -126,7 +108,7 @@ const ResponsiveAppBar = (props: Props) => {
                                     <Button
                                         key={page}
                                         onClick={() => navigateToPage(page)}
-                                        sx={{ my: 2, color: page===router.pathname.split('/')[0]?'#ffffff':'#ffffff80', display: 'block' }}
+                                        sx={{ my: 2, color: page===router.pathname.split('/')[1]?'#ffffff':'#ffffff80', display: 'block' }}
                                     >
                                         {page}
                                     </Button>
@@ -135,13 +117,19 @@ const ResponsiveAppBar = (props: Props) => {
                         ))}
                     </Box>
                     <Box>
-                        <SpecialIcon/>
+                        <IconButton
+                            size="large"
+                            onClick={() => router.push('https://github.com/Samyc2002/Portfolio')}
+                            color="inherit"
+                        >
+                            <GoGitBranch />
+                        </IconButton>
                         <IconButton
                             size="large"
                             // onClick={handleOpenNavMenu}
                             color="inherit"
                         >
-                            <LightModeOutlinedIcon color="disabled" />
+                            <DownloadOutlinedIcon />
                         </IconButton>
                     </Box>
                 </Toolbar>
@@ -150,4 +138,4 @@ const ResponsiveAppBar = (props: Props) => {
     </ElevationScroll>
   );
 };
-export default ResponsiveAppBar;
+export default Navbar;

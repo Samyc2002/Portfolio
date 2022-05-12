@@ -5,6 +5,7 @@ import { CacheProvider } from '@emotion/react';
 
 import createEmotionCache from '../styles/createEmotionCache';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import theme from '../styles/theme';
 import '../styles/globals.css';
 
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Container maxWidth="lg">
           <Component {...pageProps} />
         </Container>
+        <Footer/>
       </ThemeProvider>
     </CacheProvider>
   )

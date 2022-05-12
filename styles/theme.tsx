@@ -5,6 +5,10 @@ import { deepPurple, amber } from "@mui/material/colors";
 let theme = createTheme({
   palette: {
     mode: 'dark',
+    background: {
+      default: '#0a1929',
+      paper: '#0a1929',
+    }
   },
 });
 
