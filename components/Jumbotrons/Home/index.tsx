@@ -13,12 +13,12 @@ const HomeJumbotron = () => {
                 borderRadius: '1rem',
             }}
         >
-            <Typography variant="h4">
-                <strong style={{ color: colors.red }}>About</strong> Me
-            </Typography>
-            <br/>
-            <Grid container>
+            <Grid container sx={{ alignItems: 'center', justifyContent: 'center' }}>
                 <Grid item xs={12} md={8} sx={{ textAlign: 'justify' }}>
+                    <Typography variant="h4" align='center'>
+                        <strong style={{ color: colors.red }}>About</strong> Me
+                    </Typography>
+                    <br/>
                     <Typography>
                         I am currently doing my B.Tech at <strong style={{ color: colors.orange }}>Indian Institute of Technology, Dharwad</strong>. I love to code and <strong style={{ color: colors.orange }}>develop new, polished and scalable products</strong> which can be used in real-time. 
                         <br/>

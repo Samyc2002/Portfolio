@@ -126,7 +126,7 @@ const Navbar = (props: Props) => {
                         </IconButton>
                         <IconButton
                             size="large"
-                            // onClick={handleOpenNavMenu}
+                            onClick={() => router.push('/Samy\'s Resume.pdf')}
                             color="inherit"
                         >
                             <DownloadOutlinedIcon />
