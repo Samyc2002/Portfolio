@@ -12,5 +12,25 @@ a {
 }
 
 * {
+	scrollbar-width: thin;
+	scrollbar-color: #0E141B #ffffff;
+}
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	/* background: var(--background); */
+  background: #00121212;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #faf8fc;
+	border-radius: 20px;
+}
+
+* {
   box-sizing: border-box;
 }

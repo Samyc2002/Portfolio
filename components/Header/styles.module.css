@@ -1,0 +1,5 @@
+.name {
+    background: -webkit-linear-gradient(45deg, #f26e3f, #e43351);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

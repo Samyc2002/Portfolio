@@ -1,9 +1,11 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { CssBaseline, Container} from '@mui/material';
 import { CacheProvider } from '@emotion/react';
 
 import createEmotionCache from '../styles/createEmotionCache';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import theme from '../styles/theme';
 import '../styles/globals.css';
 
@@ -13,7 +15,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <CacheProvider value={clientSideEmotionCache}>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <CssBaseline/>
+        <Navbar/>
+        <Container maxWidth="lg">
+          <Component {...pageProps} />
+        </Container>
+        <Footer/>
       </ThemeProvider>
     </CacheProvider>
   )
