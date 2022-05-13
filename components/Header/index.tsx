@@ -14,12 +14,12 @@ const Header = () => {
           Hey There! Nice to meet you. I am
         </Typography>
         <br/>
-        <Typography variant="h2">
+        <Typography variant="h2" sx={{ fontWeight: 400 }}>
           <span className={styles.name}>Samriddha Chattopadhyay</span>
         </Typography>
         <br/>
         <Typography variant="h4">
-          I live in a world of <strong style={{ color: colors.lightPurple }}><Designation/></strong>
+          I live in a world of <span style={{ color: colors.lightPurple, fontWeight: 600 }}><Designation/></span>
         </Typography>
       </Grid>
       <Grid item md={6} xs={12}>

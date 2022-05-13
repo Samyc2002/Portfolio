@@ -8,7 +8,7 @@ const ContactMe = () => {
     return (
         <>
             <Typography variant="h5" align="center">
-                <strong style={{ color: colors.red }}>Connect</strong> with me
+                <span style={{ color: colors.red, fontWeight: 600 }}>Connect</span> with me
             </Typography>
             <br/>
             <br/>

@@ -1,5 +1,5 @@
 export const colors = {
-    deepPurple: '#25067c',
+    deepPurple: '#120044',
     purple: '#6c0bfa',
     deepPink: '#cb6da4',
     red: '#e43351',

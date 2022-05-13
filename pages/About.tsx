@@ -11,7 +11,7 @@ const About = () => {
       <Head>
         <title>About - Samy.exe</title>
         <meta name="description" content="Samriddha's Portfolio" />
-        <link rel="icon" href="/Logo_Dark.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <br/>
       <br/>
