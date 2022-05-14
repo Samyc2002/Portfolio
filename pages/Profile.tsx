@@ -20,21 +20,24 @@ const Profile = () => {
       <br/>
       <br/>
       <br/>
-      {/* <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+      <Grid container spacing={3} sx={{ display: { xs: 'flex', md: 'none' } }}>
+        <Grid item xs={12}>
           <Education/>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12}>
           <POR/>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12}>
           <Achievements/>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12}>
           <Organizations/>
         </Grid>
-      </Grid> */}
-      <Masonry columns={2} spacing={3}>
+        <Grid item xs={12}>
+          <Experience/>
+        </Grid>
+      </Grid>
+      <Masonry columns={2} spacing={3} sx={{ display: { xs: 'none', md: 'flex' } }}>
         <Education/>
         <POR/>
         <Achievements/>

@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
+import ProjectComponent from '../components/Projects';
+import Management from '../components/Management';
+
 const Projects = () => {
   return (
     <>
@@ -9,7 +12,16 @@ const Projects = () => {
         <meta name="description" content="Samriddha's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>Projects</div>
+      <br/>
+      <br/>
+      <br/>
+      <ProjectComponent/>
+      <br/>
+      <br/>
+      <br/>
+      <Management/>
+      <br/>
+      <br/>
     </>
   )
 }
