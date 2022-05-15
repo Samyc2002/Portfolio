@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
+import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, Container} from '@mui/material';
-import { CacheProvider } from '@emotion/react';
 
 import createEmotionCache from '../styles/createEmotionCache';
 import Navbar from '../components/Navbar';

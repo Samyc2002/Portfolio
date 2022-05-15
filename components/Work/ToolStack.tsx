@@ -8,7 +8,7 @@ const ToolStack = () => {
     return (
         <>
             <Typography variant="h4" align='center'>
-                <strong style={{ color: colors.red }}>Tools</strong> I Use
+                <span style={{ color: colors.red, fontWeight: 600 }}>Tools</span> I Use
             </Typography>
             <br/>
             <br/>

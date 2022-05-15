@@ -10,7 +10,7 @@ const TechStack = () => {
     return (
         <>
             <Typography variant="h4" align='center'>
-                Professional <strong style={{ color: colors.red }}>Skillset</strong>
+                Professional <span style={{ color: colors.red, fontWeight: 600 }}>Skillset</span>
             </Typography>
             <br/>
             <br/>
