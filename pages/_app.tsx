@@ -7,6 +7,7 @@ import createEmotionCache from '../styles/createEmotionCache';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import theme from '../styles/theme';
+import '../styles/loading.css';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {

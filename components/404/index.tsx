@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Grid, Typography } from '@mui/material';
 
 import { colors } from '../../styles/colors';
+import Loading from '../Loading';
 import ErrorSVG from '../ErrorSVG';
 
 const ErrorComponent = () => {
@@ -47,55 +48,61 @@ const ErrorComponent = () => {
   };
 
   return (
-    <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Box
-            sx={{
-              pl: { xs: 0, sm: 10, md: 40 },
-              pr: { xs: 0, sm: 10, md: 40 }
-            }}
-          >
-            <ErrorSVG/>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography variant="h4" align="center" gutterBottom>
-            You seem... <span style={{ color: colors.red, fontWeight: 600 }}>lost</span>?
-          </Typography>
-          <Typography variant="h6" align="center">
-            Is something broken? feel free to open up an issue at &nbsp;
-            <span 
-              style={styles} 
-              onClick={() => router.push('https://github.com/Samyc2002/Portfolio')}
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
+    <>
+      {loading ? (
+        <Loading/>
+      ):(
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Box
+              sx={{
+                pl: { xs: 0, sm: 10, md: 40 },
+                pr: { xs: 0, sm: 10, md: 40 }
+              }}
             >
-              Samyc2002/Portfolio
-            </span>
-          </Typography>
-          <Typography variant="h6" align="center">
-            ...and while you&apos;re here, why don&apos;t you check out the following pages?
-            <br/>
-            {pages.map((page) => (
-              <>
-                <span
-                  style={{ textDecoration: 'underline', cursor: 'pointer' }}
-                  onClick={() => {
-                    if (page === 'Home') {
-                      router.push('/');
-                    } else {
-                      router.push(`/${page}`);
-                    }
-                  }}
-                >
-                  {page}
-                </span>
-                &nbsp;&nbsp;
-              </>
-            ))}
-          </Typography>
+              <ErrorSVG/>
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h4" align="center" gutterBottom>
+              You seem... <span style={{ color: colors.red, fontWeight: 600 }}>lost</span>?
+            </Typography>
+            <Typography variant="h6" align="center">
+              Is something broken? feel free to open up an issue at &nbsp;
+              <span 
+                style={styles} 
+                onClick={() => router.push('https://github.com/Samyc2002/Portfolio')}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                Samyc2002/Portfolio
+              </span>
+            </Typography>
+            <Typography variant="h6" align="center">
+              ...and while you&apos;re here, why don&apos;t you check out the following pages?
+              <br/>
+              {pages.map((page) => (
+                <>
+                  <span
+                    style={{ textDecoration: 'underline', cursor: 'pointer' }}
+                    onClick={() => {
+                      if (page === 'Home') {
+                        router.push('/');
+                      } else {
+                        router.push(`/${page}`);
+                      }
+                    }}
+                  >
+                    {page}
+                  </span>
+                  &nbsp;&nbsp;
+                </>
+              ))}
+            </Typography>
+          </Grid>
         </Grid>
-    </Grid>
+      )}
+    </>
   )
 }
 
