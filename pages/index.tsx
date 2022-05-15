@@ -4,8 +4,9 @@ import type { NextPage } from 'next';
 
 import HomeJumbotron from '../components/Jumbotrons/Home';
 import ContactMe from '../components/ContactMe';
-import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
+import Loading from '../components/Loading';
+import Header from '../components/Header';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = React.useState(true);
@@ -29,27 +30,33 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Samy.exe</title>
-        <meta name="description" content="Samriddha's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <br/>
-      <br/>
-      <br/>
-      <Header/>
-      <br/>
-      <br/>
-      <br/>
-      <HomeJumbotron/>
-      <br/>
-      <br/>
-      <br/>
-      <ContactMe/>
-      <br/>
-      <br/>
-    </div>
+    <>
+      {loading? (
+          <Loading/>
+      ):(
+        <div className={styles.container}>
+          <Head>
+            <title>Samy.exe</title>
+            <meta name="description" content="Samriddha's Portfolio" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <br/>
+          <br/>
+          <br/>
+          <Header/>
+          <br/>
+          <br/>
+          <br/>
+          <HomeJumbotron/>
+          <br/>
+          <br/>
+          <br/>
+          <ContactMe/>
+          <br/>
+          <br/>
+        </div>
+      )}
+    </>
   )
 }
 

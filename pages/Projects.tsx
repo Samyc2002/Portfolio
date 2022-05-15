@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import ProjectComponent from '../components/Projects';
 import Management from '../components/Management';
+import Loading from '../components/Loading';
 
 const Projects = () => {
   const [loading, setLoading] = React.useState(true);
@@ -27,21 +28,27 @@ const Projects = () => {
 
   return (
     <>
-      <Head>
-        <title>Projects - Samy.exe</title>
-        <meta name="description" content="Samriddha's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <br/>
-      <br/>
-      <br/>
-      <ProjectComponent/>
-      <br/>
-      <br/>
-      <br/>
-      <Management/>
-      <br/>
-      <br/>
+      {loading?(
+        <Loading/>
+      ):(
+        <>
+          <Head>
+            <title>Projects - Samy.exe</title>
+            <meta name="description" content="Samriddha's Portfolio" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <br/>
+          <br/>
+          <br/>
+          <ProjectComponent/>
+          <br/>
+          <br/>
+          <br/>
+          <Management/>
+          <br/>
+          <br/>
+        </>
+      )}
     </>
   )
 }
