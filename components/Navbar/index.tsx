@@ -88,17 +88,16 @@ const Navbar = (props: Props) => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={() => navigateToPage(page)}>
-                                <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <>
+                            <React.Fragment key={page}>
                                 {router.pathname === '/' ? (
                                     <Button
-                                        key={page}
                                         onClick={() => navigateToPage(page)}
                                         sx={{ my: 2, color: page==='Home'?'#ffffff':'#ffffff80', display: 'block' }}
                                     >
@@ -106,14 +105,13 @@ const Navbar = (props: Props) => {
                                     </Button>
                                 ):(
                                     <Button
-                                        key={page}
                                         onClick={() => navigateToPage(page)}
                                         sx={{ my: 2, color: page===router.pathname.split('/')[1]?'#ffffff':'#ffffff80', display: 'block' }}
                                     >
                                         {page}
                                     </Button>
                                 )}
-                            </>
+                            </React.Fragment>
                         ))}
                     </Box>
                     <Box>

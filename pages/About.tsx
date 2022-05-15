@@ -6,6 +6,26 @@ import Work from '../components/Work';
 import styles from '../styles/Home.module.css';
 
 const About = () => {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      var state = JSON.parse(localStorage.getItem('state') as string);
+      if (!state) {
+        state = {
+          'Home': 0,
+          'About': 1,
+          'Projects': 0,
+          'Profile': 0
+        };
+      } else {
+        state['About']++;
+      }
+      localStorage.setItem('state', JSON.stringify(state));
+    }
+    setLoading(false);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>

@@ -10,6 +10,26 @@ import Education from '../components/Education';
 import POR from '../components/POR';
 
 const Profile = () => {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      var state = JSON.parse(localStorage.getItem('state') as string);
+      if (!state) {
+        state = {
+          'Home': 0,
+          'About': 0,
+          'Projects': 0,
+          'Profile': 1
+        };
+      } else {
+        state['Profile']++;
+      }
+      localStorage.setItem('state', JSON.stringify(state));
+    }
+    setLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
