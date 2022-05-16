@@ -79,7 +79,7 @@ const ErrorComponent = () => {
               </span>
             </Typography>
             <Typography variant="h6" align="center">
-              ...and while you&apos;re here, why don&apos;t you check out the following pages?
+              ...and while you&apos;re here, why don&apos;t you check out the following page(s)?
               <br/>
               {pages.map((page) => (
                 <>
