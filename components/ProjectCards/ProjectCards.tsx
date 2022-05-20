@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Zoom from 'react-reveal/Zoom';
 import { useRouter } from 'next/router';
 import { Button, Card, CardActions, CardActionArea, CardContent, CardMedia, Chip, Stack, Typography } from '@mui/material';
 
@@ -14,7 +15,9 @@ const CodersGarage = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Coder's Garage">
-                        <Image src="/Projects/CG.png" alt="Coder's Garage" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Projects/CG.png" alt="Coder's Garage" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
@@ -56,7 +59,9 @@ const CodeforcesLeaderboard = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Codeforces Leaderboard">
-                        <Image src="/Projects/CFL.png" alt="Codeforces Leaderboard" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Projects/CFL.png" alt="Codeforces Leaderboard" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
@@ -95,7 +100,9 @@ const VideoCalls = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Video Calls">
-                        <Image src="/Projects/VC.png" alt="Video Calls" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Projects/VC.png" alt="Video Calls" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
@@ -133,7 +140,9 @@ const ReactIDE = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Online React IDE">
-                        <Image src="/Projects/RIDE.png" alt="Online React IDE" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Projects/RIDE.png" alt="Online React IDE" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Avatar, Box, Grid, Typography } from '@mui/material';
+import Zoom from 'react-reveal/Zoom';
 import { colors } from '../../../styles/colors';
+import { Avatar, Box, Grid, Typography } from '@mui/material';
 
 const HomeJumbotron = () => {
     return (
@@ -30,7 +31,9 @@ const HomeJumbotron = () => {
                     </Typography>
                 </Grid>
                 <Grid item md={4} sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'center' }}>
-                    <Avatar alt="Samriddha Chattopadhyay" src="/Me.png" sx={{ width: 200, height: 200 }}/>
+                    <Zoom>
+                        <Avatar alt="Samriddha Chattopadhyay" src="/Me.png" sx={{ width: 200, height: 200 }}/>
+                    </Zoom>
                 </Grid>
             </Grid>
         </Box>
