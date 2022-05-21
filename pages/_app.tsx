@@ -1,3 +1,4 @@
+import LazyLoad from 'react-lazyload';
 import type { AppProps } from 'next/app';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
@@ -17,11 +18,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <CacheProvider value={clientSideEmotionCache}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        <Navbar/>
-        <Container maxWidth="lg">
-          <Component {...pageProps} />
-        </Container>
-        <Footer/>
+        <LazyLoad>
+          <Navbar/>
+          <Container maxWidth="lg">
+            <Component {...pageProps} />
+          </Container>
+          <Footer/>
+        </LazyLoad>
       </ThemeProvider>
     </CacheProvider>
   )

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Zoom from 'react-reveal/Zoom';
 import { Card, CardActionArea, CardContent, CardMedia, Chip, Stack, Typography } from '@mui/material';
 
 import { PARSEC2022Modal, SOI2022Modal, SOI2021Modal, LogorithmicModal } from '../ProjectModals/ManagementModals';
@@ -12,7 +13,9 @@ const PARSEC2022 = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="PARSEC 2022">
-                        <Image src="/Events/PARSEC2022.png" alt="PARSEC 2022" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Events/PARSEC2022.png" alt="PARSEC 2022" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
@@ -39,7 +42,9 @@ const SOI2022 = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Summer of Innovation 2022">
-                        <Image src="/Events/SOI2021.jpg" alt="Summer of Innovation 2022" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Events/SOI2021.jpg" alt="Summer of Innovation 2022" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
@@ -66,7 +71,9 @@ const SOI2021 = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Summer of Innovation 2021">
-                        <Image src="/Events/SOI2021.jpg" alt="Summer of Innovation 2021" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Events/SOI2021.jpg" alt="Summer of Innovation 2021" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
@@ -93,7 +100,9 @@ const Logorithmic = () => {
             <Card sx={{ maxWidth: 600 }}>
                 <CardActionArea onClick={() => setShow(true)}>
                     <CardMedia title="Inter IIT Tech Collaboration">
-                        <Image src="/Events/IITC.jpeg" alt="Inter IIT Tech Collaboration" width={600} height={300} objectFit="cover" />
+                        <Zoom>
+                            <Image src="/Events/IITC.jpeg" alt="Inter IIT Tech Collaboration" width={600} height={300} objectFit="cover" />
+                        </Zoom>
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5">

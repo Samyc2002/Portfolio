@@ -1,6 +1,5 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import TextTransition, { presets } from "react-text-transition";
 import Typewriter from "typewriter-effect";
 
 
