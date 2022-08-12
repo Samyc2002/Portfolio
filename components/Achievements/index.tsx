@@ -21,7 +21,7 @@ const Education = () => {
             </Typography>
             <br/>
             <br/>
-            <LinkedDiv href='/GCFBadge.png'>
+            <LinkedDiv href='/GCFCerty.pdf'>
                 Google Cloud Facilitator 2022
             </LinkedDiv>
             <br/>
