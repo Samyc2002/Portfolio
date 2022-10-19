@@ -16,7 +16,8 @@ const Projects = () => {
           'Home': 0,
           'About': 0,
           'Projects': 1,
-          'Profile': 0
+          'Profile': 0,
+          'Blogs': 0,
         };
       } else {
         state['Projects']++;

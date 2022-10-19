@@ -19,7 +19,8 @@ const Home: NextPage = () => {
           'Home': 1,
           'About': 0,
           'Projects': 0,
-          'Profile': 0
+          'Profile': 0,
+          'Blogs': 0,
         };
       } else {
         state['Home']++;

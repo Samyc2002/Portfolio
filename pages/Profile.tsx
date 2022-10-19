@@ -21,7 +21,8 @@ const Profile = () => {
           'Home': 0,
           'About': 0,
           'Projects': 0,
-          'Profile': 1
+          'Profile': 1,
+          'Blogs': 0,
         };
       } else {
         state['Profile']++;

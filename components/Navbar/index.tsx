@@ -23,7 +23,7 @@ const ElevationScroll = (props: Props) => {
 }
 
 
-const pages = ['Home', 'About', 'Projects', 'Profile'];
+const pages = ['Home', 'About', 'Projects', 'Profile', 'Blogs'];
 
 const Navbar = (props: Props) => {
     const router = useRouter();

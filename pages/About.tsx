@@ -17,7 +17,8 @@ const About = () => {
           'Home': 0,
           'About': 1,
           'Projects': 0,
-          'Profile': 0
+          'Profile': 0,
+          'Blogs': 0,
         };
       } else {
         state['About']++;
