@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { NextRouter, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { GoGitBranch } from "react-icons/go";
-import { Menu as MenuIcon, DarkModeOutlined as DarkModeOutlinedIcon, LightModeOutlined as LightModeOutlinedIcon, DownloadOutlined as DownloadOutlinedIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, DescriptionOutlined as DescriptionOutlinedIcon } from '@mui/icons-material';
 import { Box, AppBar, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem, useScrollTrigger } from '@mui/material';
 
 interface Props {
@@ -21,7 +21,6 @@ const ElevationScroll = (props: Props) => {
       elevation: trigger ? 4 : 0,
     });
 }
-
 
 const pages = ['Home', 'About', 'Projects', 'Profile', 'Blogs'];
 
@@ -127,7 +126,7 @@ const Navbar = (props: Props) => {
                             onClick={() => router.push('/Samy\'s Resume.pdf')}
                             color="inherit"
                         >
-                            <DownloadOutlinedIcon />
+                            <DescriptionOutlinedIcon />
                         </IconButton>
                     </Box>
                 </Toolbar>

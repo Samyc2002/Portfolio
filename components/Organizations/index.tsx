@@ -22,7 +22,7 @@ const Organizations = () => {
             <br/>
             <br/>
             <Div>
-                OSS | Core Team Member
+                OSS | Owner
                 <br/>
                 <i>May 2022 - Present</i>
             </Div>
@@ -37,7 +37,7 @@ const Organizations = () => {
                     <ListItemIcon>
                         <AdjustIcon/>
                     </ListItemIcon>
-                    <ListItemText disableTypography primary="Promoted to Core Team Member of the Open Student Society Organization on Github as on May 2022" />
+                    <ListItemText disableTypography primary="Became Owner of the Open Student Society Organization on Github as on May 2022" />
                 </ListItem>
             </List>
             <br/>
