@@ -24,7 +24,7 @@ const Education = () => {
             <Div>
                 Coding Club Secretary, IIT Dharwad
                 <br/>
-                <i>May 2022 - Present</i>
+                <i>May 2022 - April 2023</i>
             </Div>
             <br/>
             <List

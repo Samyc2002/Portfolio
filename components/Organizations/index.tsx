@@ -43,7 +43,7 @@ const Organizations = () => {
             <br/>
             <br/>
             <Div>
-                Coding Club | Secretary
+                Coding Club | Member (Former Secretary till April 2023)
                 <br/>
                 <i>May 2022 - Present</i>
             </Div>

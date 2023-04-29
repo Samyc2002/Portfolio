@@ -30,7 +30,11 @@ const Experience = () => {
       </Typography>
       <br />
       <br />
-      <Div>Internship at Shram</Div>
+      <Div>
+        Part-Time at Shram
+        <br />
+        <i>June 2022 - Present</i>
+      </Div>
       <br />
       <List
         dense
@@ -38,6 +42,15 @@ const Experience = () => {
           display: 'contents'
         }}
       >
+        <ListItem>
+          <ListItemIcon>
+            <AdjustIcon />
+          </ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary="Developed and Maintained the React Native App for Shram"
+          />
+        </ListItem>
         <ListItem>
           <ListItemIcon>
             <AdjustIcon />
