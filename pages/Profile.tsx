@@ -1,81 +1,89 @@
-import React from 'react';
-import Head from 'next/head';
-import { Grid } from '@mui/material';
-import { Masonry  } from '@mui/lab';
+import React from "react";
+import Head from "next/head";
+import { Grid } from "@mui/material";
+import { Masonry } from "@mui/lab";
 
-import Organizations from '../components/Organizations';
-import Achievements from '../components/Achievements';
-import Experience from '../components/Experience';
-import Education from '../components/Education';
-import Loading from '../components/Loading';
-import POR from '../components/POR';
+import Organizations from "../components/Organizations";
+import Achievements from "../components/Achievements";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import Loading from "../components/Loading";
+import POR from "../components/POR";
 
 const Profile = () => {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      var state = JSON.parse(localStorage.getItem('state') as string);
+      var state = JSON.parse(localStorage.getItem("state") as string);
       if (!state) {
         state = {
-          'Home': 0,
-          'About': 0,
-          'Projects': 0,
-          'Profile': 1,
-          'Blogs': 0,
+          Home: 0,
+          About: 0,
+          Projects: 0,
+          Profile: 1,
+          Blogs: 0
         };
       } else {
-        state['Profile']++;
+        state["Profile"]++;
       }
-      localStorage.setItem('state', JSON.stringify(state));
+      localStorage.setItem("state", JSON.stringify(state));
     }
     setLoading(false);
   }, []);
 
   return (
     <>
-      {loading?(
-        <Loading/>
-      ):(
+      {loading ? (
+        <Loading />
+      ) : (
         <>
           <Head>
             <title>Profile - Samy.exe</title>
             <meta name="description" content="Samriddha's Portfolio" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <br/>
-          <br/>
-          <br/>
-          <Grid container spacing={3} sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <br />
+          <br />
+          <br />
+          <Grid
+            container
+            spacing={3}
+            sx={{ display: { xs: "flex", md: "none" } }}
+          >
             <Grid item xs={12}>
-              <Education/>
+              <Education />
             </Grid>
             <Grid item xs={12}>
-              <POR/>
+              <Experience />
             </Grid>
             <Grid item xs={12}>
-              <Achievements/>
+              <POR />
             </Grid>
             <Grid item xs={12}>
-              <Organizations/>
+              <Achievements />
             </Grid>
             <Grid item xs={12}>
-              <Experience/>
+              <Organizations />
             </Grid>
           </Grid>
-          <Masonry columns={2} spacing={3} sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Education/>
-            <POR/>
-            <Achievements/>
-            <Organizations/>
-            <Experience/>
+          <Masonry
+            columns={2}
+            spacing={3}
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
+            <Education />
+            <Experience />
+            <POR />
+            <Achievements />
+            <Organizations />
           </Masonry>
-          <br/>
-          <br/>
+          <br />
+          <br />
         </>
       )}
     </>
-  )
-}
+  );
+};
 
 export default Profile;

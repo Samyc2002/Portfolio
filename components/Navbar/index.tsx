@@ -51,7 +51,7 @@ const Navbar = (props: Props) => {
             position="sticky"
             sx={{
                 backdropFilter:"blur(20px)",
-                backgroundColor: "#12004478",
+                backgroundColor: "#03001C78",
             }}
         >
             <Container maxWidth="lg">

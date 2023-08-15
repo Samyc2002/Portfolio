@@ -1,26 +1,26 @@
-import React from 'react';
-import { Adjust as AdjustIcon } from '@mui/icons-material';
+import React from "react";
+import { Adjust as AdjustIcon } from "@mui/icons-material";
 import {
   Box,
   List,
   ListItem,
-  ListItemText,
   ListItemIcon,
+  ListItemText,
   Typography
-} from '@mui/material';
+} from "@mui/material";
 
-import { colors } from '../../styles/colors';
+import { colors } from "../../styles/colors";
 
-import { Div, LinkedDiv } from '../Div';
+import { Div, LinkedDiv } from "../Div";
 
 const Experience = () => {
   return (
     <Box
       sx={{
-        padding: '2rem',
-        textAlign: 'center',
-        display: 'grid',
-        placeItems: 'center'
+        padding: "2rem",
+        textAlign: "center",
+        display: "grid",
+        placeItems: "center"
       }}
     >
       <Typography variant="h4">
@@ -31,7 +31,7 @@ const Experience = () => {
       <br />
       <br />
       <Div>
-        Part-Time at Shram
+        Part-Time Full Stack Developer at Shram
         <br />
         <i>June 2022 - Present</i>
       </Div>
@@ -39,7 +39,7 @@ const Experience = () => {
       <List
         dense
         sx={{
-          display: 'contents'
+          display: "contents"
         }}
       >
         <ListItem>
@@ -48,7 +48,7 @@ const Experience = () => {
           </ListItemIcon>
           <ListItemText
             disableTypography
-            primary="Developed and Maintained the React Native App for Shram"
+            primary="Developed the main Shram App from bottom up"
           />
         </ListItem>
         <ListItem>
@@ -57,7 +57,7 @@ const Experience = () => {
           </ListItemIcon>
           <ListItemText
             disableTypography
-            primary="Developed Algorithms that let users manage their tasks efficiently."
+            primary="Developed the workspace gamificaiton feature which rewards the users with XP for completing their tasks and milestones, and gives them levels and progress based on the XP gained"
           />
         </ListItem>
         <ListItem>
@@ -66,7 +66,7 @@ const Experience = () => {
           </ListItemIcon>
           <ListItemText
             disableTypography
-            primary="Built the setup guide which let users authenticate themselves in a secure way and made them accustomed to the app, hence increasing userbase."
+            primary="Developed Progress Meeting Feature, which lets the team members in an organisation take a pit stop and assess their progress"
           />
         </ListItem>
         <ListItem>
@@ -75,7 +75,25 @@ const Experience = () => {
           </ListItemIcon>
           <ListItemText
             disableTypography
-            primary="Developed Transition algorithms which lets users self asess themselves and prepare themselves during month end, for the next month."
+            primary="Developed the timeline feature that helps users interpret their deadlines in a visual way"
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <AdjustIcon />
+          </ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary="Developed the scheduler feature that helps users schedule their tasks for a day"
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <AdjustIcon />
+          </ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary="Responsible for maintaining the entire codebase with bug fixes and stabilizations, along with the production environment"
           />
         </ListItem>
       </List>
@@ -90,7 +108,7 @@ const Experience = () => {
       <List
         dense
         sx={{
-          display: 'contents'
+          display: "contents"
         }}
       >
         <ListItem>
@@ -123,7 +141,7 @@ const Experience = () => {
       <List
         dense
         sx={{
-          display: 'contents'
+          display: "contents"
         }}
       >
         <ListItem>
