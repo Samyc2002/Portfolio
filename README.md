@@ -1,88 +1,38 @@
-<h2 align="center">
- Portfolio Website<br/>
- <a href="https://samy-exe.netlify.app/" target="_blank">Samy.exe</a>
-</h2>
+# create-svelte
 
-<div align="center">
- <img alt="Demo" src="./Demo.png" />
-</div>
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-<br/>
+## Creating a project
 
-<center>
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-</center>
-
-<h3 align="center">
-    🔹
-    <a href="https://github.com/Samyc2002/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/Samyc2002/Portfolio/issues">Request Feature</a>
-</h3>
-
-## TL;DR
-
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Samyc2002](https://github.com/Samyc2002/Coders-Garage). Thanks!
-
-## Built With
-
-My personal portfolio <a href="https://samy-exe.netlify.app/" target="_blank">Samy.exe</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
-This project was built using these technologies.
-
-- React.js
-- Node.js
-- Material UI
-- CSS3
-- VsCode
-- Netlify
-- Figma
-
-## Features
-
-**📖 Multi-Page Layout**
-
-**🎨 Styled with Material UI and CSS with easy to customize colors**
-
-**📱 Fully Responsive**
-
-## Getting Started
-
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
-
-## 🛠 Installation and Setup Instructions
-
-### To run the client
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-  npm i --force
-  npm start
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-Runs the client app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+## Developing
 
-## Usage Instructions
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-Open the project folder and Navigate to `/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+```bash
+npm run dev
 
-`/pages` has all the components arranged and organised in pages.
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-### Show your support
+## Building
 
-Give a ⭐ if you like this website!
+To create a production version of your app:
 
-### How to contribute
+```bash
+npm run build
+```
 
-- Create an Issue and wait for being assigned to it. (I shall be assigning them about twice a day)
-- Fork the repository.
-- Make changes and commits on the forked repository
-- Create a pull request to the master branch of the original repository
-- Valid pull requests will be merged
+You can preview the production build with `npm run preview`.
 
-Make sure you update the documentation accordingly.
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
