@@ -25,11 +25,29 @@
 	let scrollTop = 0;
 	let pageHeight = 0;
 	let pageWidth = 0;
+	let scale = 1;
 	if (typeof window !== 'undefined') {
 		pageHeight = window.innerHeight;
 		pageWidth = window.innerWidth;
 		scrollY.set(window.scrollY || 0);
 		scrollTop = window.scrollY || 0;
+	}
+
+	let isPC = false,
+		isTablet = false,
+		isMobile = false;
+
+	if (pageWidth >= 1024) {
+		isPC = true;
+	} else if (pageWidth >= 700) {
+		isTablet = true;
+	} else {
+		isMobile = true;
+	}
+
+	if (isMobile) {
+		scale = pageWidth / pageHeight;
+		scrollTop = scale * scrollTop;
 	}
 
 	let currentElement = 'Home';
@@ -58,7 +76,7 @@
 	const handleScroll = () => {
 		if (typeof window !== 'undefined') {
 			scrollY.set(window.scrollY || 0);
-			scrollTop = (window.scrollY || 0) / (5 * 0.92);
+			scrollTop = (scale * (window.scrollY || 0)) / (5 * 0.92);
 			updateeCurrentElement();
 		}
 	};
@@ -79,21 +97,9 @@
 		}
 	};
 
-	let isPC = false,
-		isTablet = false,
-		isMobile = false;
-
-	if (pageWidth >= 1024) {
-		isPC = true;
-	} else if (pageWidth > 700) {
-		isTablet = true;
-	} else {
-		isMobile = true;
-	}
-
 	let flexDirection = '';
-	if (isMobile) flexDirection = 'column;';
-	else flexDirection = 'row;';
+	if (isMobile) flexDirection = 'column';
+	else flexDirection = 'row';
 
 	let fullSizeButtons = false;
 	if (isPC) fullSizeButtons = true;
@@ -116,22 +122,24 @@
 <body class:hideScroll id="background" style="background-color: {$bgColor};" bind:this={background}>
 	<div
 		class="background"
-		style="background-image: linear-gradient(to right, {Color.Black}, {$bgColor});"
+		style={`background-image: linear-gradient(to ${isMobile ? "bottom" : "right"}, ${Color.Black}, ${$bgColor});`}
 	/>
 	<div class="container" style="flex-direction: {flexDirection};">
 		<div
-			class="scrollbar"
+			class={`scrollbar-${isMobile ? 'top' : 'left'}`}
 			style="background-color: {'color-mix(in srgb, ' + $bgColor + ' 40%, black)'};"
 		>
 			<div class="scrollbar-track">
 				<div
-					class="scrollbar-thumb"
-					style="top: {scrollTop + 'px'}; height: {pageHeight / 5 +
-						'px'}; background-color: {$bgColor}"
+					class={`scrollbar-thumb-${isMobile ? 'top' : 'left'}`}
+					style={`${isMobile ? 'left' : 'top'}: ${scrollTop}px; ${isMobile ? 'width' : 'height'}: ${pageWidth / 5}px; background-color: ${$bgColor}`}
 				></div>
 			</div>
 		</div>
-		<div class="sidebar" style="max-width: {sidebarWidth + 'px'}; height: {sidebarHeight + 'px'};">
+		<div
+			class={`sidebar-${isMobile ? 'top' : 'left'}`}
+			style="width: {sidebarWidth + 'px'}; height: {sidebarHeight + 'px'};"
+		>
 			<Sidebar>
 				{#if !isMobile}
 					<Button
@@ -165,7 +173,7 @@
 				{/if}
 			</Sidebar>
 		</div>
-		<div class="details">
+		<div class="details" style={`margin-top: ${isMobile ? "94px" : "0"};`}>
 			<Details>Home Details</Details>
 			<Details>Journey Details</Details>
 			<Details>Profile Details</Details>
@@ -181,43 +189,68 @@
 	}
 	.background {
 		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100vw;
 		height: 100vh;
 		z-index: 0;
+		transition: all 1s ease-in-out;
 	}
 	.container {
 		position: relative;
 		display: flex;
 		justify-content: flex-end;
 	}
-	.scrollbar {
+	.scrollbar-left {
 		position: fixed;
 		left: 0;
 		width: 10px;
 		height: 100vh;
-		z-index: 0;
+		z-index: 2;
+	}
+	.scrollbar-top {
+		position: fixed;
+		top: 0;
+		height: 10px;
+		width: 100vh;
+		z-index: 2;
 	}
 	.scrollbar-track {
 		position: relative;
 		height: 100%;
 		width: 100%;
 	}
-	.scrollbar-thumb {
+	.scrollbar-thumb-left {
 		position: absolute;
 		left: 0;
 		width: 100%;
 		transition: all 500ms ease-in-out;
 	}
-	.sidebar {
+	.scrollbar-thumb-top {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		transition: all 500ms ease-in-out;
+	}
+	.sidebar-left {
 		position: fixed;
+		display: flex;
+		flex-direction: column;
 		left: 10px;
-		z-index: 0;
+		z-index: 1;
+	}
+	.sidebar-top {
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		top: 10px;
+		z-index: 1;
 	}
 	.details {
 		display: flex;
 		flex-direction: column;
 		gap: 60px;
 		padding: 50px;
-		z-index: 1;
+		z-index: 0;
 	}
 </style>

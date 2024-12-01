@@ -38,4 +38,4 @@
 	}
 </script>
 
-<Icon {size} {color} />
+<svelte:component this={Icon} {size} {color} />
