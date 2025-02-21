@@ -6,13 +6,14 @@ import Sticky from "../custom/sticky";
 import { Card, CardHeader, CardTitle, CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 const About = () => {
     return (
         <div className="w-full pt-10 md:pt-40 flex flex-col gap-10">
             <Avatar className="border-foreground border-2 p-1 z-0">
-                <AvatarImage src="/avatar.jpg" />
-                <AvatarFallback>Samriddha</AvatarFallback>
+                <Image src="/avatar.png" width={230} height={230} alt="Samriddha" />
+                {/* <AvatarFallback>Samriddha</AvatarFallback> */}
             </Avatar>
 
             <div className="flex flex-col gap-4">
