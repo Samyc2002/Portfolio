@@ -11,7 +11,7 @@ const About = () => {
     return (
         <div className="w-full pt-10 md:pt-40 flex flex-col gap-10">
             <Avatar className="border-foreground border-2 p-1 z-0">
-                <AvatarImage src="/avatar.svg" />
+                <AvatarImage src="/avatar.jpg" />
                 <AvatarFallback>Samriddha</AvatarFallback>
             </Avatar>
 
