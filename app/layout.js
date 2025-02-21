@@ -4,6 +4,7 @@ import { Separator } from '@/components/ui/separator';
 import { ThemeProvider } from "@/components/theme-provider"
 import NavBar from '@/components/custom/navbar';
 import "./globals.css";
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -65,6 +66,7 @@ export default function RootLayout({ children }) {
             </div>
           </footer>
         </ThemeProvider>
+        <Toaster richColors />
       </body>
     </html>
   );

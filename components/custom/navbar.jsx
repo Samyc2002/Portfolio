@@ -4,6 +4,7 @@ import { Separator } from '../ui/separator';
 import { Button } from '../ui/button';
 import { FolderOpenIcon, PhoneCall } from 'lucide-react';
 import useWindowScroll from '../useWindowSize';
+import { toast } from 'sonner';
 
 const NavBar = () => {
     const { y } = useWindowScroll();
@@ -27,7 +28,7 @@ const NavBar = () => {
                                 <p className="hidden md:block">CV</p>
                             </Button>
                         </a>
-                        <Button variant="outline">
+                        <Button variant="outline" onClick={() => toast.info("Coming Soon")}>
                             <PhoneCall />
                             <p className="hidden md:block">Contact</p>
                         </Button>
