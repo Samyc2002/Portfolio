@@ -1,10 +1,10 @@
 import { Inter } from 'next/font/google'
-import { Github, Instagram, LinkedinIcon, Mail, X } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
 import { ThemeProvider } from "@/components/theme-provider"
 import NavBar from '@/components/custom/navbar';
-import "./globals.css";
 import { Toaster } from '@/components/ui/sonner';
+import Footer from '@/components/custom/footer';
+import "./globals.css";
+import Background from '@/components/custom/background';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,48 +23,12 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <Background />
           <NavBar />
           <main className="px-10 md:px-40 xl:px-64 pb-10">
             {children}
           </main>
-          <footer className="px-10 md:px-40 xl:px-64 p-10 flex flex-col gap-4 items-center">
-            <Separator className="bg-slate-600" />
-            <p>
-              Built by{" "}
-              <a
-                className="text-cyan-300"
-                href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=samriddha-chattopadhyay"
-              >
-                Samriddha Chattopadhyay
-              </a>.
-              The source code is available on{" "}
-              <a
-                className="text-slate-400 underline"
-                href="https://github.com/samyc2002/Portfolio"
-              >
-                Github
-              </a>.
-            </p>
-            <div className='flex gap-10 justify-center items-center'>
-              <span className="bg-foreground rounded-lg hover:bg-yellow-400 cursor-pointer">
-                <a href="https://x.com/samy_0202">
-                  <X className="text-background" />
-                </a>
-              </span>
-              <a href="https://www.linkedin.com/in/samriddha-chattopadhyay/">
-                <LinkedinIcon className="hover:text-yellow-400 cursor-pointer" />
-              </a>
-              <a href="https://www.instagram.com/samriddhachattopadhyay/">
-                <Instagram className="hover:text-yellow-400 cursor-pointer" />
-              </a>
-              <a href="https://github.com/Samyc2002">
-                <Github className="hover:text-yellow-400 cursor-pointer" />
-              </a>
-              <a href="mailto:samriddhaworkid@gmail.com">
-                <Mail className="hover:text-yellow-400 cursor-pointer" />
-              </a>
-            </div>
-          </footer>
+          <Footer />
         </ThemeProvider>
         <Toaster richColors />
       </body>

@@ -26,7 +26,7 @@ const NavBar = () => {
                         <a href="/Samriddha_Chattopadhyay_2025.pdf">
                             <Button className="hover:bg-cyan-400">
                                 <FolderOpenIcon />
-                                <p className="hidden md:block">CV</p>
+                                <p className="hidden md:block">Resumé</p>
                             </Button>
                         </a>
                         <ContactBtn />
