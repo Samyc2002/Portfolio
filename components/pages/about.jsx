@@ -13,6 +13,7 @@ const About = () => {
         <div className="w-full pt-10 md:pt-40 flex flex-col gap-10">
             <Avatar className="border-foreground border-2 p-1 z-0">
                 <Image src="/avatar.png" width={230} height={230} alt="Samriddha" />
+                {/* <AvatarImage src="/avatar.png" /> */}
                 {/* <AvatarFallback>Samriddha</AvatarFallback> */}
             </Avatar>
 
