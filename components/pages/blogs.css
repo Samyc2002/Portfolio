@@ -1,0 +1,21 @@
+.medium-feed-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.medium-feed-image img {
+    width: auto;
+    height: min-content;
+    overflow-y: hidden;
+    aspect-ratio: 1;
+}
+
+.medium-feed-snippet {
+    display: none;
+    font-size: 20px;
+}
+
+.medium-feed-link {
+    display: none;
+}

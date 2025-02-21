@@ -1,88 +1,36 @@
-<h2 align="center">
- Portfolio Website<br/>
- <a href="https://samy-exe.netlify.app/" target="_blank">Samy.exe</a>
-</h2>
-
-<div align="center">
- <img alt="Demo" src="./Demo.png" />
-</div>
-
-<br/>
-
-<center>
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-</center>
-
-<h3 align="center">
-    🔹
-    <a href="https://github.com/Samyc2002/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/Samyc2002/Portfolio/issues">Request Feature</a>
-</h3>
-
-## TL;DR
-
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Samyc2002](https://github.com/Samyc2002/Coders-Garage). Thanks!
-
-## Built With
-
-My personal portfolio <a href="https://samy-exe.netlify.app/" target="_blank">Samy.exe</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
-This project was built using these technologies.
-
-- React.js
-- Node.js
-- Material UI
-- CSS3
-- VsCode
-- Netlify
-- Figma
-
-## Features
-
-**📖 Multi-Page Layout**
-
-**🎨 Styled with Material UI and CSS with easy to customize colors**
-
-**📱 Fully Responsive**
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
-
-## 🛠 Installation and Setup Instructions
-
-### To run the client
+First, run the development server:
 
 ```bash
-  npm i --force
-  npm start
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Runs the client app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Usage Instructions
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-Open the project folder and Navigate to `/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-`/pages` has all the components arranged and organised in pages.
+## Learn More
 
-### Show your support
+To learn more about Next.js, take a look at the following resources:
 
-Give a ⭐ if you like this website!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### How to contribute
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- Create an Issue and wait for being assigned to it. (I shall be assigning them about twice a day)
-- Fork the repository.
-- Make changes and commits on the forked repository
-- Create a pull request to the master branch of the original repository
-- Valid pull requests will be merged
+## Deploy on Vercel
 
-Make sure you update the documentation accordingly.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
