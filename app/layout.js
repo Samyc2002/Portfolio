@@ -4,6 +4,7 @@ import NavBar from '@/components/custom/navbar';
 import { Toaster } from '@/components/ui/sonner';
 import Footer from '@/components/custom/footer';
 import "./globals.css";
+import Background from '@/components/custom/background';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <Background />
           <NavBar />
           <main className="px-10 md:px-40 xl:px-64 pb-10">
             {children}

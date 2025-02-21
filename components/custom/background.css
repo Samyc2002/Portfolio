@@ -1,0 +1,58 @@
+.icon {
+    /* position: absolute; */
+    stroke: #494949;
+    stroke-width: 1.5;
+    fill: none;
+    opacity: 0;
+    animation: fadeInOut 4s infinite;
+}
+
+#controller {
+    top: 20%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+#keyboard {
+    top: 50%;
+    left: 8%;
+    animation-delay: 0.8s;
+}
+
+#mouse {
+    top: 25%;
+    right: 5%;
+    animation-delay: 1.6s;
+}
+
+#headphones {
+    top: 60%;
+    right: 8%;
+    animation-delay: 2.4s;
+}
+
+#laptop {
+    bottom: 20%;
+    left: 5%;
+    animation-delay: 3.2s;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+}

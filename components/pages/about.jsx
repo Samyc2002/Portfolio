@@ -23,7 +23,7 @@ const About = () => {
                     <Text content={"Hi there, I am Samriddha. I am a software developer from India."} />
                     <SubText content={"I started off as a web developer in 2021 and built my first MERN stack project. Since then, I have grown into a more of a backend engineer and spend most of my time on the command line. I’m a tinkerer and like to experiment with new technologies and products. I build projects to solve my day to day problems and explore tech as much as I can in my free time."} />
                     <div className="text-lg md:text-xl" style={{ color: "#828282" }}>
-                        I am also a <span style={{ color: "hsl(var(--foreground))" }}>Technical content writer</span> and write about things I learn on <MediumCard />.
+                        I also <span style={{ color: "hsl(var(--foreground))" }}>Write technical content</span> on <MediumCard />, sharing insights and lessons from my learning journey.
                     </div>
                 </span>
 

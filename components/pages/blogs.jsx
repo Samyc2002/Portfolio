@@ -22,7 +22,7 @@ const Blogs = () => {
             const req = ps[ps.length - 1].innerHTML;
             let post = {
                 ...item,
-                action: req
+                action: [...req.split(" ").slice(0, 2), req.split(" ").at(-1)].join(" ")
             }
             return post;
         })
