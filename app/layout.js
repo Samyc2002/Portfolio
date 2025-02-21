@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <main className="px-10 md:px-40 xl:px-64 pb-10">
             {children}
           </main>
-          <footer className="px-10 md:px-40 xl:px-64 p-10 flex flex-col gap-4">
+          <footer className="px-10 md:px-40 xl:px-64 p-10 flex flex-col gap-4 items-center">
             <Separator className="bg-slate-600" />
             <p>
               Built by{" "}
