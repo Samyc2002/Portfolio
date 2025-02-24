@@ -10,7 +10,7 @@ const Footer = () => {
             <div>
                 Built by{" "} <NameCard />. The source code is available on{" "} <GithubCard />.
             </div>
-            <div className='flex gap-10 justify-center items-center'>
+            <div className='flex gap-10 justify-center items-center md:hidden xl:flex'>
                 <span className="bg-foreground rounded-lg hover:bg-yellow-400 cursor-pointer">
                     <a href="https://x.com/samy_0202">
                         <X className="text-background" />
