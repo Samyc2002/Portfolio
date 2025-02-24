@@ -1,10 +1,12 @@
-import Title from "@/components/custom/title";
+"use client"
+import { useEffect, useRef } from "react";
+import Sticky from "../custom/sticky";
+import Title from "../custom/title";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import ExperienceCard from "../custom/experiencecard";
 import { Separator } from "../ui/separator";
 import Text from "../custom/text";
 import { awards, education, volunteering, workExperiences } from "@/lib/data";
-import Sticky from "../custom/sticky";
 
 const experiences = [
     {
@@ -30,10 +32,20 @@ const experiences = [
 ]
 
 const Experience = () => {
+    const experienceRef = useRef(null);
+
+    useEffect(() => {
+        if (experienceRef) {
+            if (experienceRef?.current?.getBoundingClientRect()?.top) {
+                localStorage.setItem("top-1", experienceRef?.current?.getBoundingClientRect()?.top);
+            }
+        }
+    }, [experienceRef])
+
     return (
-        <div className="w-full pt-10 flex flex-col gap-4">
+        <div className="w-full pt-10 flex flex-col gap-4" id="myaccomplishments" ref={experienceRef}>
             <Sticky>
-                <Title content={"My Accomplishments"} />
+                <Title content={"🏅 My Accomplishments"} />
             </Sticky>
 
             <Accordion type="multiple" collapsible="true" defaultValue={["item-1", "item-3"]}>

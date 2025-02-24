@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MediumArticles } from 'medium-article-api';
 import Title from "@/components/custom/title";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
@@ -12,6 +12,7 @@ import Sticky from "../custom/sticky";
 const Blogs = () => {
     const medium = MediumArticles();
     const [blogs, setBlogs] = useState([]);
+    const blogsRef = useRef(null);
 
     const getLatestPosts = async () => {
         const parser = new DOMParser();
@@ -31,10 +32,18 @@ const Blogs = () => {
 
     useEffect(() => { getLatestPosts() }, []);
 
+    useEffect(() => {
+        if (blogsRef) {
+            if (blogsRef?.current?.getBoundingClientRect()?.top) {
+                localStorage.setItem("top-3", blogsRef?.current?.getBoundingClientRect()?.top);
+            }
+        }
+    }, [blogsRef]);
+
     return (
-        <div className="w-full pt-10 flex flex-col gap-4">
+        <div className="w-full pt-10 flex flex-col gap-4" id="articlesbyme" ref={blogsRef}>
             <Sticky>
-                <Title content={"Articles By Me"} />
+                <Title content={"📜 Articles By Me"} />
             </Sticky>
 
             <div className="flex justify-center align-middle">

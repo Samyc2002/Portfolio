@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useRef } from "react";
 import SubText from "@/components/custom/subtext";
 import Text from "@/components/custom/text";
 import Title from "@/components/custom/title";
@@ -8,15 +10,25 @@ import Image from "next/image";
 import MediumCard from "../custom/mediumcard";
 
 const About = () => {
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        if (aboutRef) {
+            if (aboutRef?.current?.getBoundingClientRect()?.top) {
+                localStorage.setItem("top-0", aboutRef?.current?.getBoundingClientRect()?.top);
+            }
+        }
+    }, [aboutRef]);
+
     return (
-        <div className="w-full pt-10 md:pt-40 flex flex-col gap-10">
+        <div className="w-full pt-10 md:pt-40 flex flex-col gap-10" id="aboutme" ref={aboutRef}>
             <Avatar className="border-foreground border-2 p-1 z-0">
                 <Image src="/avatar.png" width={230} height={230} alt="Samriddha" />
             </Avatar>
 
             <div className="flex flex-col gap-4">
                 <Sticky>
-                    <Title content={"About Me"} />
+                    <Title content={"👩🏻‍💼 About Me"} />
                 </Sticky>
 
                 <span>
