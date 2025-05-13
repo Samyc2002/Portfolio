@@ -46,6 +46,9 @@ const ExperienceCard = ({ experience }) => {
                         {experience.details.map((detail, index) => (
                             <li className="text-base" key={index}>{detail}</li>
                         ))}
+                        {experience.details.length === 0 && (
+                            <p className="text-base italic">Nothing significant to put here yet.</p>
+                        )}
                     </ul>
                 </div>
             </div>
